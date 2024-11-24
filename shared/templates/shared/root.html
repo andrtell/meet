@@ -11,5 +11,9 @@
 	</head>
 	<body>
 		{% block body %}{% endblock %}
+		<form action="{% url 'logout' %}" method="post">
+			{% csrf_token %}
+			<button type="submit">Log out</button>
+		</form>
 	</body>
 </html>

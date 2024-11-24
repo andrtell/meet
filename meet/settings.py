@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'debug.apps.DebugConfig',
     'public.apps.PublicConfig',
     'shared.apps.SharedConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AUTH
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
