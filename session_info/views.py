@@ -11,8 +11,8 @@ def view(request):
 
 def do_set(request, key, val):
     request.session[key] = val
-    return HttpResponseRedirect(reverse('session_view'))
+    return HttpResponseRedirect(reverse('session_info_view'))
 
 def do_del(request, key):
     del request.session[key]
-    return HttpResponseRedirect(reverse('session_view'))
+    return HttpResponseRedirect(reverse('session_info_view'))
