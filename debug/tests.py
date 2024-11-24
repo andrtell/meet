@@ -13,7 +13,7 @@ class DebugSessionClientTest(TestCase):
         test_key = 'foo'
         test_val = 'bar'
 
-        resp = client.get(reverse("debug_session_dump"))
+        resp = client.get(reverse("debug:session_dump"))
 
         self.assertIsInstance(resp, JsonResponse)
 
@@ -25,7 +25,7 @@ class DebugSessionClientTest(TestCase):
 
         resp = self.client.get(
             reverse(
-                "debug_session_put", 
+                "debug:session_put", 
                 kwargs={
                     'key': test_key, 
                     'val': test_val
@@ -45,7 +45,7 @@ class DebugSessionClientTest(TestCase):
 
         resp = self.client.get(
             reverse(
-                "debug_session_del", 
+                "debug:session_del", 
                 kwargs={'key': test_key }
             ),
             follow = True

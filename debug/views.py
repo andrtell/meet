@@ -12,7 +12,7 @@ def session_dump(request):
 
 def session_put(request, key, val):
     request.session[key] = val
-    return redirect('debug_session_dump')
+    return redirect('debug:session_dump')
 
 
 def session_del(request, key):
@@ -21,4 +21,4 @@ def session_del(request, key):
     except KeyError:
         pass
 
-    return redirect('debug_session_dump')
+    return redirect('debug:session_dump')
